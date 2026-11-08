@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZPCL 软件下载</title>
-<!-- 网页标签页图标（蓝黄渐变 Z） -->
-<link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23FACC15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='40' fill='url(%23g)'/%3E%3Cpolygon points='128,40 208,84 128,128 48,84' fill='%23ffffff'/%3E%3Cpolygon points='128,128 48,84 48,172 128,216' fill='%23e0e0e0'/%3E%3Cpolygon points='128,128 208,84 208,172 128,216' fill='%23c0c0c0'/%3E%3Ctext x='128' y='148' font-family='Arial, sans-serif' font-size='90' font-weight='bold' fill='%231E3A8A' text-anchor='middle' dominant-baseline='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<!-- 网页标签页图标（黑白渐变 Z） -->
+<link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23333333'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='40' fill='url(%23g)'/%3E%3Cpolygon points='128,40 208,84 128,128 48,84' fill='%23ffffff'/%3E%3Cpolygon points='128,128 48,84 48,172 128,216' fill='%23e0e0e0'/%3E%3Cpolygon points='128,128 208,84 208,172 128,216' fill='%23c0c0c0'/%3E%3Ctext x='128' y='148' font-family='Arial, sans-serif' font-size='90' font-weight='bold' fill='%23000000' text-anchor='middle' dominant-baseline='middle'%3EZ%3C/text%3E%3C/svg%3E">
 
 <style>
   * { box-sizing: border-box; }
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 网页整体背景：浅蓝到浅黄的渐变 */
+    /* 网页大背景：蓝黄渐变 */
     background: linear-gradient(135deg, #E0F2FE, #FEF08A);
     color: #111;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -25,7 +25,7 @@
     max-width: 340px;
     margin: 20px;
     padding: 48px 40px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0,0,0,.08);
     text-align: center;
@@ -34,18 +34,17 @@
   .btn {
     display: block;
     padding: 16px 24px;
-    /* 按钮背景：黑白渐变 */
-    background: linear-gradient(135deg, #333333, #000000);
-    color: #fff;
+    /* 下载按钮：黑白渐变 */
+    background: linear-gradient(135deg, #444444, #000000);
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
     transition: opacity .2s;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* 文字加一点阴影，在黄色上更清晰 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
-  .btn:hover { opacity: 0.9; }
+  .btn:hover { opacity: 0.8; }
   .mail { margin: 28px 0 0; font-size: 13px; color: #888; }
   .mail a { color: #3B82F6; text-decoration: none; font-weight: 500; }
   .mail a:hover { text-decoration: underline; }
@@ -55,8 +54,8 @@
   <div class="card">
     <h1>ZPCL 软件下载</h1>
     
-    <!-- 点击直接下载 ZPCL.zip -->
-    <a class="btn" href="ZPCL.zip" download="ZPCL.zip">立即下载</a>
+    <!-- 点击直接下载 ZPCL.exe -->
+    <a class="btn" href="ZPCL.exe" download="ZPCL.exe">立即下载</a>
     
     <p class="mail">联系邮箱：<a href="mailto:3918217062@qq.com">3918217062@qq.com</a></p>
   </div>
