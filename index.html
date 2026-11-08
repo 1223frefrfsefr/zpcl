@@ -13,42 +13,46 @@
     margin: 0;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     /* 网页大背景：蓝黄渐变 */
     background: linear-gradient(135deg, #E0F2FE, #FEF08A);
     color: #111;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    position: relative; /* 为了让左下角的邮箱能绝对定位 */
+    position: relative;
   }
-  .card {
-    width: 100%;
-    max-width: 340px;
-    margin: 20px;
-    padding: 48px 40px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,.08);
-    text-align: center;
+
+  /* 背景上的 ZPCL 大标题 */
+  .title {
+    font-size: 72px;
+    font-weight: 900;
+    color: #22C55E; /* 绿色 */
+    letter-spacing: 12px; /* 字母间隔 */
+    margin-bottom: 60px; /* 和下方下载框的间隔 */
+    text-shadow: 2px 4px 12px rgba(34, 197, 94, 0.3); /* 微微带点绿色的阴影，更有立体感 */
+    margin-left: 12px; 
   }
-  h1 { margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #1E3A8A; }
   
+  /* 下载按钮 */
   .btn {
     display: block;
-    padding: 16px 24px;
+    padding: 18px 48px;
     /* 下载按钮：黑白渐变 */
     background: linear-gradient(135deg, #444444, #000000);
     color: #ffffff;
-    font-size: 20px; /* 字号稍微加大，配合间隔更大气 */
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 10px;
-    transition: opacity .2s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    letter-spacing: 8px; /* 字母之间的间隔 */
-    padding-left: 32px; /* 为了让字母整体居中，抵消掉最后的留白 */
+    border-radius: 12px;
+    transition: all .2s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    letter-spacing: 4px;
   }
-  .btn:hover { opacity: 0.8; }
+  .btn:hover { 
+    opacity: 0.85; 
+    transform: translateY(-2px); 
+  }
 
   /* 邮箱固定在左下角 */
   .mail-footer {
@@ -60,7 +64,7 @@
     background: rgba(255, 255, 255, 0.6);
     padding: 8px 16px;
     border-radius: 20px;
-    backdrop-filter: blur(4px); /* 毛玻璃效果，让字更清晰 */
+    backdrop-filter: blur(4px);
   }
   .mail-footer a {
     color: #000;
@@ -73,16 +77,17 @@
 </style>
 </head>
 <body>
-  <div class="card">
-    <h1>ZPCL 软件下载</h1>
-    
-    <!-- 下载按钮，文字 Z P C L -->
-    <a class="btn" href="ZPCL.exe" download="ZPCL.exe">ZPCL</a>
-  </div>
 
-  <!-- 邮箱放在左下角 -->
+  <!-- 绿色的大标题 -->
+  <div class="title">ZPCL</div>
+  
+  <!-- 黑白渐变的下载按钮 -->
+  <a class="btn" href="ZPCL.exe" download="ZPCL.exe">立即下载</a>
+
+  <!-- 左下角邮箱 -->
   <div class="mail-footer">
     联系邮箱：<a href="mailto:3918217062@qq.com">3918217062@qq.com</a>
   </div>
+
 </body>
 </html>
