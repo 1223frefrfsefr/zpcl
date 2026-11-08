@@ -19,6 +19,7 @@
     background: linear-gradient(135deg, #E0F2FE, #FEF08A);
     color: #111;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    position: relative; /* 为了让左下角的邮箱能绝对定位 */
   }
   .card {
     width: 100%;
@@ -31,33 +32,57 @@
     text-align: center;
   }
   h1 { margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #1E3A8A; }
+  
   .btn {
     display: block;
     padding: 16px 24px;
     /* 下载按钮：黑白渐变 */
     background: linear-gradient(135deg, #444444, #000000);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 20px; /* 字号稍微加大，配合间隔更大气 */
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
     transition: opacity .2s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    letter-spacing: 8px; /* 字母之间的间隔 */
+    padding-left: 32px; /* 为了让字母整体居中，抵消掉最后的留白 */
   }
   .btn:hover { opacity: 0.8; }
-  .mail { margin: 28px 0 0; font-size: 13px; color: #888; }
-  .mail a { color: #3B82F6; text-decoration: none; font-weight: 500; }
-  .mail a:hover { text-decoration: underline; }
+
+  /* 邮箱固定在左下角 */
+  .mail-footer {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-size: 14px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px); /* 毛玻璃效果，让字更清晰 */
+  }
+  .mail-footer a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .mail-footer a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
   <div class="card">
     <h1>ZPCL 软件下载</h1>
     
-    <!-- 点击直接下载 ZPCL.exe -->
-    <a class="btn" href="ZPCL.exe" download="ZPCL.exe">立即下载</a>
-    
-    <p class="mail">联系邮箱：<a href="mailto:3918217062@qq.com">3918217062@qq.com</a></p>
+    <!-- 下载按钮，文字 Z P C L -->
+    <a class="btn" href="ZPCL.exe" download="ZPCL.exe">ZPCL</a>
+  </div>
+
+  <!-- 邮箱放在左下角 -->
+  <div class="mail-footer">
+    联系邮箱：<a href="mailto:3918217062@qq.com">3918217062@qq.com</a>
   </div>
 </body>
 </html>
